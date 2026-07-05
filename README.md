@@ -1,110 +1,194 @@
-# Introduction to Recommender Systems
-In this repository you will learn the basics of **recommender systems** and how to build them using **content-based** and **collaborative filtering** techniques using `Scikit-Surprise`, a Python library used especially for building and analyzing recommender systems that deal with [`explicit rating`](https://mirumee.com/blog/the-difference-between-implicit-and-explicit-data-for-business) data. 
+# ds-recommender-systems
 
+**Build and Understand Recommender Systems with Content-Based and Collaborative Filtering**
 
-## The way to success:
-Please **work together as Pair Programmers** through all the notebooks
-in this particular order:
+[![Language](https://img.shields.io/github/languages/top/PartORG/ds-recommender-systems?color=blue)](https://github.com/PartORG/ds-recommender-systems)
+[![Python Version](https://img.shields.io/badge/python-3.11.3-blue.svg)](https://www.python.org/downloads/release/python-3113/)
+[![License](https://img.shields.io/github/license/PartORG/ds-recommender-systems?color=green)](LICENSE)
+[![Package Manager](https://img.shields.io/badge/package-manager-pip-blue.svg)](https://pip.pypa.io/en/stable/installation/)
+[![Framework](https://img.shields.io/badge/framework-jupyterlab-green.svg)](https://jupyter.org/)
 
-1. **`Content Based Recommender`**
-   + [content based recommender](01_content_based.ipynb)
-2. **`Exercise: Build a Most-Popular Movie Recommender`**
-   + [Exercise: Most Popular Movie Recommender](02_exercise_most_popular.ipynb)
- 
-3. **`Collaborative Filtering`**
-   + [Collaborative Filtering based on Similarity](03_collaborative_filtering_similarity.ipynb)
-   + [Collaborative Filtering based on Matrix Factorization](03_collaborative_filtering_matrix_factorization.ipynb)
-   + [Exercise: Build a Collaborative Filtering Movie Recommender System](03_exercise_collaborative_filtering.ipynb)
-4. **`Recommender Evaluation`**
-   + [How to Evaluate Recommenders](04_recommender_evaluation.ipynb)
+## Introduction
 
+Welcome to the `ds-recommender-systems` repository! This project is designed to help you learn and build recommender systems using content-based and collaborative filtering techniques. With this repository, you'll gain hands-on experience with Scikit-Surprise, a powerful Python library for building and analyzing recommender systems that deal with explicit rating data.
 
-## Set up your Environment
+The primary workflow of this repository involves working through a series of Jupyter Notebooks in the specified order. Each notebook covers different aspects of recommender systems, from basic concepts to practical exercises and evaluations.
 
-The added [requirements file](requirements.txt) contains all libraries and dependencies we need to execute the notebooks.
+## Table of Contents
 
-### **`macOS`** type the following commands : 
+- [Features](#features)
+- [How It Works](#how-it-works)
+- [Technology Stack](#technology-stack)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Quick Start](#quick-start)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Development](#development)
+- [Limitations](#limitations)
+- [License](#license)
 
-- Install the virtual environment and the required packages by following commands:
+## Features
 
-    ```BASH
-    pyenv local 3.11.3
-    python -m venv .venv
-    source .venv/bin/activate
-    pip install --upgrade pip
-    pip install -r requirements.txt
-    ```
-### **`WindowsOS`** type the following commands :
+### Recommender Systems
+Learn the fundamentals of recommender systems and how to build them using content-based and collaborative filtering techniques.
 
-- Install the virtual environment and the required packages by following commands.
+### Content-Based Filtering
+Explore how to recommend items based on user preferences and item attributes.
 
-   For `PowerShell` CLI :
+### Collaborative Filtering
+Dive into collaborative filtering methods, including similarity-based and matrix factorization approaches.
 
-    ```PowerShell
-    pyenv local 3.11.3
-    python -m venv .venv
-    .venv\Scripts\Activate.ps1
-    pip install --upgrade pip
-    pip install -r requirements.txt
-    ```
+## How It Works
 
-    For `Git-Bash` CLI :
-    ```
-    pyenv local 3.11.3
-    python -m venv .venv
-    source .venv/Scripts/activate
-    pip install --upgrade pip
-    pip install -r requirements.txt
-    ```
+The repository is structured around Jupyter Notebooks for learning and practicing recommender systems. Each notebook provides detailed explanations and exercises using Scikit-Surprise library. The development workflow involves setting up a virtual environment, installing dependencies, and running the notebooks in sequence.
 
+## Technology Stack
 
-*Note: If there are errors during environment setup, try removing the versions from the failing packages in the requirements file.*
+| Technology | Purpose |
+|------------|---------|
+| **JupyterLab** | Interactive computing environment for data analysis, visualization, and machine learning. |
+| **Numpy** | Fundamental package for scientific computing with Python. |
+| **Pandas** | Data structures and operations for manipulating numerical tables and time series. |
+| **Scikit-Learn** | Simple and efficient tools for predictive data analysis. |
+| **Scikit-Surprise** | A Python library used especially for building and analyzing recommender systems that deal with explicit rating data. |
+| **Matplotlib** | Comprehensive library for creating static, animated, and interactive visualizations in Python. |
+| **Seaborn** | Statistical data visualization based on Matplotlib. |
 
----
+## Requirements
 
-## Troubleshooting
+- Python 3.11.3
+- JupyterLab 4.3.6
+- Numpy 1.26.4
+- Pandas 2.2.2
+- Scikit-Learn 1.6.1
+- Scikit-Surprise 1.1.4
+- Matplotlib 3.10.1
+- Seaborn 0.13.2
 
-### Windows: scikit-surprise Installation Error
+## Installation
 
-If you encounter errors when installing `scikit-surprise` on Windows, such as:
-- `"Failed building wheel"`
-- `"Microsoft Visual C++ 14.0 is required"`
-- `"Unable to find vcvarsall.bat"`
-- `"distutils.errors.DistutilsError"`
+### macOS
 
-This happens because `scikit-surprise` requires C++ build tools to compile from source.
+```bash
+pyenv local 3.11.3
+python -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
+pip install -r requirements.txt
+```
 
-#### Solution:
+### WindowsOS (PowerShell)
 
-0. **Open Visual Studio 2022 Installer:**
-   - If not installed yet, see step 1 to download and install it first
+```powershell
+pyenv local 3.11.3
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+pip install --upgrade pip
+pip install -r requirements.txt
+```
 
-1. **Download Visual Studio Build Tools:**
-   - Go to: https://visualstudio.microsoft.com/downloads/
-   - Scroll down to **"All Downloads"**
-   - Under **"Tools for Visual Studio"**, download **"Build Tools for Visual Studio"** (latest version)
+### WindowsOS (Git-Bash)
 
-2. **Run the Installer:**
-   - Launch the downloaded installer
-   - When the Visual Studio Installer opens, you'll see the **"Workloads"** tab
+```bash
+pyenv local 3.11.3
+python -m venv .venv
+source .venv/Scripts/activate
+pip install --upgrade pip
+pip install -r requirements.txt
+```
 
-3. **Select the Required Components:**
-   - ✅ **ONLY check:** **"Desktop development with C++"**
-   - ⚠️ **Important:** Do NOT select all options - this will install unnecessary components and take up significant disk space
-   - (Optional) You may also check **"Python development"** under "Web & Cloud"
+*Note: If there are errors during environment setup, try removing the versions from the failing packages in the `requirements.txt` file.*
 
-4. **Install:**
-   - Click **"Install"** and wait for the installation to complete (this may take several minutes)
+## Configuration
 
-6. **Restart your machine**
+No specific configuration files or environment variables are required for this project.
 
-7. **Package Installation:**
-   - **open** your terminal/command prompt (important: this refreshes environment variables)
-   - Run: `pip3 install misaka`
-   - Navigate to your project directory
-   - Reactivate your virtual environment
-   - Run: `pip install -r requirements.txt`
+## Quick Start
 
-The installation should now complete successfully!
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/PartORG/ds-recommender-systems.git
+   cd ds-recommender-systems
+   ```
 
-**Additional Resources:** If you continue to experience issues, see [this Stack Overflow discussion](https://stackoverflow.com/questions/48541801/microsoft-visual-c-14-0-is-required-get-it-with-microsoft-visual-c-build-t) for more solutions.
+2. **Set up your environment** (follow the instructions above based on your operating system).
+
+3. **Open JupyterLab**:
+   ```bash
+   jupyter lab
+   ```
+
+4. **Run the notebooks in order**:
+   - `01_content_based.ipynb`
+   - `02_exercise_most_popular.ipynb`
+   - `03_collaborative_filtering_similarity.ipynb`
+   - `03_collaborative_filtering_matrix_factorization.ipynb`
+   - `03_exercise_collaborative_filtering.ipynb`
+   - `04_recommender_evaluation.ipynb`
+
+## Usage
+
+Each notebook provides detailed instructions and examples. Here are some key commands and entry points:
+
+- **Content-Based Recommender**:
+  ```python
+  from surprise import Dataset, Reader, KNNWithMeans
+  reader = Reader(rating_scale=(1, 5))
+  data = Dataset.load_from_df(df[['user_id', 'item_id', 'rating']], reader)
+  trainset = data.build_full_trainset()
+  algo = KNNWithMeans(k=40, sim_options={'name': 'pearson_baseline', 'user_based': True})
+  algo.fit(trainset)
+  ```
+
+- **Collaborative Filtering**:
+  ```python
+  from surprise import SVD
+  reader = Reader(rating_scale=(1, 5))
+  data = Dataset.load_from_df(df[['user_id', 'item_id', 'rating']], reader)
+  trainset = data.build_full_trainset()
+  algo = SVD(n_factors=100, n_epochs=20, lr_all=0.0075, reg_all=0.02)
+  algo.fit(trainset)
+  ```
+
+## Project Structure
+
+```
+ds-recommender-systems/
+├── .gitignore
+├── 01_content_based.ipynb
+├── 02_exercise_most_popular.ipynb
+├── 03_collaborative_filtering_matrix_factorization.ipynb
+├── 03_collaborative_filtering_similarity.ipynb
+├── 03_exercise_collaborative_filtering.ipynb
+├── 04_recommender_evaluation.ipynb
+├── README.md
+├── data/
+│   ├── fish_1.csv
+│   └── user_item_ratings.csv
+├── images/
+│   ├── KNNExampleCalc.png
+│   ├── SVD_USigmaV.png
+│   ├── UserItemRatingMatrix.png
+│   ├── UserSimilarityMatrix.png
+│   ├── book_text.png
+│   ├── explode_genre.png
+│   ├── fish_text.png
+│   ├── movies.png
+│   └── str_split_on_movies_genre.png
+└── requirements.txt
+```
+
+## Development
+
+The repository is structured around Jupyter Notebooks, making it easy to develop and test new features. Each notebook should be self-contained and clearly documented.
+
+## Limitations
+
+- This project focuses on explicit rating data.
+- The repository does not include automated testing.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
